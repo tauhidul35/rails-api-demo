@@ -1,0 +1,22 @@
+require: rubocop-rspec
+
+AllCops:
+  Exclude:
+    - "bin/*"
+    - "db/schema.rb"
+    - "vendor/bundle/**/*"
+
+Rails:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/IndentAssignment:
+  Enabled: false
+
+Style/Next:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
