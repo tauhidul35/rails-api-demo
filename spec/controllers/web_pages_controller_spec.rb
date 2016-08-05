@@ -25,7 +25,7 @@ RSpec.describe WebPagesController, type: :controller do
   describe 'GET #show' do
     it 'assigns the requested web_page as @web_page' do
       web_page = WebPage.create! valid_attributes
-      get :show, params: {id: web_page.to_param}, session: valid_session
+      get :show, params: { id: web_page.to_param }, session: valid_session
       expect(assigns(:web_page)).to eq(web_page)
     end
   end
@@ -33,15 +33,15 @@ RSpec.describe WebPagesController, type: :controller do
   describe 'POST #create' do
     context 'with valid params' do
       it 'creates a new WebPage' do
-        expect {
+        expect do
           post :create, params: { web_page: valid_attributes }, session: valid_session
-        }.to change(WebPage, :count).by(1)
+        end.to change(WebPage, :count).by(1)
       end
 
       it 'failed to create WebPage without url' do
-        expect {
+        expect do
           post :create, params: { web_page: invalid_attributes }, session: valid_session
-        }.to change(WebPage, :count).by(0)
+        end.to change(WebPage, :count).by(0)
       end
 
       it 'assigns a newly created web_page as @web_page' do
@@ -72,7 +72,7 @@ RSpec.describe WebPagesController, type: :controller do
 
       it 'updates the requested web_page' do
         web_page = WebPage.create! valid_attributes
-        put :update, params: {id: web_page.to_param, web_page: new_attributes}, session: valid_session
+        put :update, params: { id: web_page.to_param, web_page: new_attributes }, session: valid_session
         web_page.reload
         expect(assigns(:web_page)).to eq(web_page)
       end
@@ -85,7 +85,7 @@ RSpec.describe WebPagesController, type: :controller do
 
       it 'responce after create' do
         web_page = WebPage.create! valid_attributes
-        put :update, params: {id: web_page.to_param, web_page: valid_attributes}, session: valid_session
+        put :update, params: { id: web_page.to_param, web_page: valid_attributes }, session: valid_session
         expect(response.status).to eq 200
       end
     end
@@ -93,13 +93,13 @@ RSpec.describe WebPagesController, type: :controller do
     context 'with invalid params' do
       it 'assigns the web_page as @web_page' do
         web_page = WebPage.create! valid_attributes
-        put :update, params: {id: web_page.to_param, web_page: invalid_attributes}, session: valid_session
+        put :update, params: { id: web_page.to_param, web_page: invalid_attributes }, session: valid_session
         expect(assigns(:web_page)).to eq(web_page)
       end
 
       it 'responce Unprocessable Entity' do
         web_page = WebPage.create! valid_attributes
-        put :update, params: {id: web_page.to_param, web_page: invalid_attributes}, session: valid_session
+        put :update, params: { id: web_page.to_param, web_page: invalid_attributes }, session: valid_session
         expect(response.status).to eq 422
       end
     end
@@ -109,13 +109,13 @@ RSpec.describe WebPagesController, type: :controller do
     it 'destroys the requested web_page' do
       web_page = WebPage.create! valid_attributes
       expect do
-        delete :destroy, params: {id: web_page.to_param}, session: valid_session
+        delete :destroy, params: { id: web_page.to_param }, session: valid_session
       end.to change(WebPage, :count).by(-1)
     end
 
     it 'responce after redirect' do
       web_page = WebPage.create! valid_attributes
-      delete :destroy, params: {id: web_page.to_param}, session: valid_session
+      delete :destroy, params: { id: web_page.to_param }, session: valid_session
       expect(response.status).to eq 200
     end
   end

@@ -7,7 +7,7 @@ RSpec.describe WebPagesController, type: :routing do
     end
 
     it 'routes to #show' do
-      expect(get: '/web_pages/1').to route_to('web_pages#show', :id => '1')
+      expect(get: '/web_pages/1').to route_to('web_pages#show', id: '1')
     end
 
     it 'routes to #create' do
@@ -15,15 +15,15 @@ RSpec.describe WebPagesController, type: :routing do
     end
 
     it 'routes to #update via PUT' do
-      expect(put: '/web_pages/1').to route_to('web_pages#update', :id => '1')
+      expect(put: '/web_pages/1').to route_to('web_pages#update', id: '1')
     end
 
     it 'routes to #update via PATCH' do
-      expect(patch: '/web_pages/1').to route_to('web_pages#update', :id => '1')
+      expect(patch: '/web_pages/1').to route_to('web_pages#update', id: '1')
     end
 
     it 'routes to #destroy' do
-      expect(delete: '/web_pages/1').to route_to('web_pages#destroy', :id => '1')
+      expect(delete: '/web_pages/1').to route_to('web_pages#destroy', id: '1')
     end
   end
 end

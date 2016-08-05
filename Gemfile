@@ -33,6 +33,8 @@ group :development, :test do
   gem 'rubocop-rspec', '~> 1.6.0'
 
   gem 'rails-controller-testing', '~> 0.1.1'
+
+  gem 'brakeman', '~> 3.3.3', require: false
 end
 
 group :development do

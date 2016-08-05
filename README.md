@@ -13,6 +13,10 @@ in this case to store the content that is found inside the tags h1, h2 and h3 an
 
 * Test code - I have used rspec to test code. Run `rspec` to run all test code.
 
+* Security check - I have used brakeman to check security issues. Run `brakeman` from project root directory.
+
+* Syntax check - I have used rubocop to analyze static Ruby code. Run `rubocop` from project root directory.
+
 # API Documentation
 
 **Save content of a url :**

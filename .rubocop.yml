@@ -12,10 +12,7 @@ Rails:
 Style/Documentation:
   Enabled: false
 
-Style/IndentAssignment:
-  Enabled: false
-
-Style/Next:
+Style/FrozenStringLiteralComment:
   Enabled: false
 
 Metrics/LineLength:

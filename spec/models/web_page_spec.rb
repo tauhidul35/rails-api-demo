@@ -7,6 +7,6 @@ RSpec.describe WebPage, type: :model do
 
   it 'is not valid without a url' do
     web_page = WebPage.new(url: nil)
-    expect(web_page).to_not be_valid
+    expect(web_page).not_to be_valid
   end
 end

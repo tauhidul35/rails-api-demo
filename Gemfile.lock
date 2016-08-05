@@ -45,6 +45,7 @@ GEM
       tzinfo (~> 1.1)
     arel (7.1.1)
     ast (2.3.0)
+    brakeman (3.3.3)
     builder (3.2.2)
     byebug (9.0.5)
     concurrent-ruby (1.0.2)
@@ -171,6 +172,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.2)
+  brakeman (~> 3.3.3)
   byebug
   factory_girl_rails (~> 4.7.0)
   listen (~> 3.0.5)
