@@ -1,7 +1,8 @@
 # Overview
 
-This is a tiny RESTful API to index a page's content. "Index the content" means to parse the page content and store its content -
-in this case to store the content that is found inside the tags h1, h2 and h3 and the links.
+This is a tiny RESTful API to index a page's content. "Index the content" means to parse the page content and store its content - in this case to store the content that is found inside the tags h1, h2 and h3 and the links.
+
+Semaphore CI : [![Build Status](https://semaphoreci.com/api/v1/projects/cb7ac14a-8ab7-48cd-b624-0bc941c5d2cc/921470/badge.svg)](https://semaphoreci.com/nascenia/rails-api-demo)
 
 # Project Setup
 
